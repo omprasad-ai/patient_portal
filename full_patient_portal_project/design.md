@@ -1,8 +1,8 @@
 # Design Document — Patient Documents Portal
 
 ## Tech Stack Choices
-1. **Frontend:** JavaFX desktop application (Java)
-   - Rationale: User requested frontend in Java. JavaFX provides a modern desktop UI, native file chooser, easy packaging and a single-user assumption fits desktop app model.
+1. **Frontend:** Frontend: ReactJS (Vite + React)
+Rationale: React provides a modern component-based architecture, fast rendering, easy state management, and smooth handling of file uploads via fetch/axios. It integrates cleanly with REST APIs and allows a responsive, user-friendly web interface.
 2. **Backend:** Spring Boot (Java)
    - Rationale: Production-grade, quick to scaffold REST APIs, first-class support for file upload, JPA for metadata persistence and easy MySQL integration.
 3. **Database:** MySQL
@@ -14,8 +14,7 @@
 - Single-user assumption (no auth).
 
 ```
-[JavaFX Client] --(POST /documents/upload)--> [Spring Boot API] --store file--> uploads/
-                                                                                                 -- store metadata --> MySQL (patient_docs.documents)
+[JavaFX Client] --(POST /documents/upload)--> [Spring Boot API] --store file--> uploads/-- store metadata --> MySQL (patient_docs.documents)
 ```
 
 ## API Specification
