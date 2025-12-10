@@ -1,13 +1,72 @@
-body { font-family: Arial, sans-serif; margin: 20px; color:#111; }
-.container { max-width: 900px; margin: 0 auto; }
-.upload-form { margin-bottom: 12px; display:flex; gap:8px; align-items:center; }
-.upload-form input { padding:6px; }
-.upload-form button { padding:6px 10px; cursor:pointer; }
-.status { margin: 8px 0; padding:8px; border-radius:4px; }
-.status.success { background:#e6ffed; border:1px solid #49a46b; color:#1f6f3a; }
-.status.error { background:#ffe6e6; border:1px solid #d9534f; color:#7a1c1c; }
-.doc-table { width:100%; border-collapse: collapse; margin-top: 10px; }
-.doc-table th, .doc-table td { border:1px solid #ddd; padding:8px; text-align:left; }
-.doc-table th { background:#f7f7f7; }
-button { padding:6px 8px; margin-right:6px; cursor:pointer; }
-button.danger { background:#fff0f0; border:1px solid #d9534f; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #111;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.upload-form {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.upload-form input {
+    padding: 6px;
+}
+
+.upload-form button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.status {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.status.success {
+    background: #e6ffed;
+    border: 1px solid #49a46b;
+    color: #1f6f3a;
+}
+
+.status.error {
+    background: #ffe6e6;
+    border: 1px solid #d9534f;
+    color: #7a1c1c;
+}
+
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.doc-table th,
+.doc-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.doc-table th {
+    background: #f7f7f7;
+}
+
+button {
+    padding: 6px 8px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+button.danger {
+    background: #fff0f0;
+    border: 1px solid #d9534f;
+}
