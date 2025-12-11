@@ -1,10 +1,10 @@
-# Patient Documents Portal (JavaFX + Spring Boot + MySQL)
+# Patient Documents Portal (Reactjs + Spring Boot + MySQL)
 
 This repository contains a working full-stack sample required by the assessment.
 
 ## Contents
 - `backend/` — Spring Boot application (port 8080)
-- `frontend/` — JavaFX desktop client (Java 17)
+- `frontend/` —  Reactjs
 - `design.md` — Design document answering PDF requirements
 
 ## Prerequisites
@@ -28,7 +28,7 @@ This repository contains a working full-stack sample required by the assessment.
 ## Setup (Frontend)
 1. From `frontend/` run:
    ```
-   mvn javafx:run
+   npm:run
    ```
 2. Use the UI to upload, download, delete files. Double-click an item to download it.
 

@@ -9,12 +9,12 @@ Rationale: React provides a modern component-based architecture, fast rendering,
    - Rationale: Requirement from the user. Well-supported by Spring Data JPA, robust and familiar.
 
 ## Architecture Overview
-- JavaFX frontend -> HTTP requests -> Spring Boot backend (REST)
+- ReactJS frontend -> HTTP requests -> Spring Boot backend (REST)
 - Spring Boot stores files on local filesystem (uploads/) and metadata in MySQL table `documents`.
 - Single-user assumption (no auth).
 
 ```
-[JavaFX Client] --(POST /documents/upload)--> [Spring Boot API] --store file--> uploads/-- store metadata --> MySQL (patient_docs.documents)
+[ReactJS Client] --(POST /documents/upload)--> [Spring Boot API] --store file--> uploads/-- store metadata --> MySQL (patient_docs.documents)
 ```
 
 ## API Specification
@@ -38,14 +38,14 @@ Rationale: React provides a modern component-based architecture, fast rendering,
 ## Data Flow
 ### Upload
 1. User chooses a PDF and clicks Upload.
-2. JavaFX sends multipart POST to `/documents/upload`.
+2. ReactJS sends multipart POST to `/documents/upload`.
 3. Backend validates content type, saves file to `uploads/` with a timestamped name.
 4. Backend saves metadata (original filename, filepath, filesize, created_at) to MySQL.
 5. Backend returns saved metadata; frontend shows success and refreshes list.
 
 ### Download
 1. User selects an item and triggers download.
-2. JavaFX calls GET `/documents/{id}`.
+2. Reactjs calls GET `/documents/{id}`.
 3. Backend locates file path by id, streams file back with `application/pdf`.
 4. Client saves file to chosen location.
 
